@@ -6,7 +6,7 @@
  * Time: 14:23
  */
 
-namespace Ethos\DataFileManager\Setup;
+namespace Ethos\FileNameExtension\Setup;
 
 
 use Magento\Framework\Setup\ModuleContextInterface;
