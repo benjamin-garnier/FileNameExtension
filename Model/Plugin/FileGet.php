@@ -43,8 +43,7 @@ class FileGet
         \Magento\Sales\Api\Data\OrderInterface $resultOrder
     )
     {
-        try {
-            $this->logs->info("[FileGet]afterGet called");
+        try {           
             $extensionAttributes = $resultOrder->getExtensionAttributes();
             $data_file_name =  $resultOrder->getData('file_name');
             if ($extensionAttributes != null) {
@@ -52,7 +51,7 @@ class FileGet
                 $resultOrder->setExtensionAttributes($extensionAttributes);
             }
         } catch (Exception $e) {
-            $this->logs->info("[Ethos][FileGet][afterGet] error = $e\n");
+            $this->logs->error("[Ethos][FileGet][afterGet] error = $e\n");
         }
         return $resultOrder;
     }
