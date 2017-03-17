@@ -43,7 +43,6 @@ class FileSave
         \Magento\Sales\Api\Data\OrderInterface $resultOrder
     )
     {
-        $this->logs->info("[FileSave][afterSave] called");
         if (!self::isAlreadyCalled()) {
             try {
                 self::setAlreadyCalled(true);
